@@ -165,8 +165,8 @@ header{
 .copy h2{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 2.1rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
     color: white;
 }
 .copy1{
@@ -186,8 +186,66 @@ header{
     color: hsl(176, 68%, 64%) ;
 }
 
+.testimonial{
+    width: 80%;
+    margin: 50px auto 250px auto;
+    display:grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-template-rows: minmax(150px, auto);
+    grid-gap: 20px;
+}
+.test{
+    background: hsl(217, 28%, 15%);
+    box-shadow: 0 0 4px hsl(217, 28%, 13%);
+    border-radius: 5px;
+    padding: 30px;
+    color: white;
 
-/* Mobile design */
+}
+.testbody{
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(0, 0%, 70%);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+.testprofile{
+    /* max-height: 20%; */
+    display: flex;
+    /* justify-content: center; */
+    margin-top: 20px;
+    align-content: center;
+    align-items: center;
+
+}
+
+.testprofile img{
+    height: 50px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+/* .testdetails {
+    display: grid;
+    grid-template-rows: auto auto;
+
+} */
+.testdetails h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+.testdetails p{
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(0, 0%, 70%);
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+Mobile design */
 @media (min-width:375px){
 
     header{
