@@ -189,10 +189,15 @@ header{
 .testimonial{
     width: 80%;
     margin: 50px auto 250px auto;
+    padding: 30px;
     display:grid;
     grid-template-columns: repeat(3, minmax(150px, 1fr));
     grid-template-rows: minmax(150px, auto);
     grid-gap: 20px;
+    background-image: url(./images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-position-x: 10px;
 }
 .test{
     background: hsl(217, 28%, 15%);
