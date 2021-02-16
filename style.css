@@ -147,7 +147,7 @@ header .nav a_:hover {
   display: -ms-grid;
   display: grid;
   margin: 100px auto;
-      grid-template-areas: "tile1 tile2" "tile3 tile4";
+      grid-template-areas: "tile1 tile2" "tile3 tile4";
   text-align: center;
   grid-gap: 50px;
   max-width: 50%;
@@ -310,7 +310,7 @@ header .nav a_:hover {
 .subscription-container .subscription {
   background-color: #1c2431;
   max-width: 700px;
-  min-height: 200px;
+  min-heighst: 200px;
   margin: 0px auto 0px auto;
   text-align: center;
   padding: 30px;
