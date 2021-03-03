@@ -37,7 +37,7 @@ body {
 }
 
 header {
-  background: #202a3c;
+  background: #1c2431;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,7 +82,7 @@ header .nav a_:hover {
   background-size: contain;
   width: 100%;
   min-height: 100px;
-  background-color: #202a3c;
+  background-color: #1c2431;
   /* margin: 0px auto; */
 }
 
@@ -314,14 +314,16 @@ header .nav a_:hover {
   font-family: "Open Sans", sans-serif;
   color: white;
   max-width: 100%;
-  background-color: #181f2a;
-  min-height: 0px;
+  background: #181f2a;
+  margin-top: -50px;
   padding: 0px 20px;
   position: relative;
 }
 
 .subscription-container .subscription {
-  background-color: #202a3c;
+  background-color: #1c2431;
+  -webkit-box-shadow: 4px 7px 4px #0b1523;
+          box-shadow: 4px 7px 4px #0b1523;
   max-width: 700px;
   min-height: 200px;
   margin: 0px auto 0px auto;

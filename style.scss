@@ -1,63 +1,12 @@
-//color variables
-$color-bg-intro: hsl(217, 28%, 13%);
-$color-neutral: hsl(0, 0%, 100%);
-$color-bg-testimonials: hsl(219, 30%, 18%);
-$color-bg-main: hsl(218, 28%, 13%);
-$color-bg-footer: hsl(216, 53%, 9%);
+@import './partials/variables';
+@import './partials/extends';
+@import './partials/basics';
 
-$color-accent-cyan: hsl(176, 68%, 64%);
-$color-accent-blue: hsl(198, 60%, 50%);
-$color-accent-red: hsl(0, 100%, 63%);
 
-//font variables
-$font-raleway: "Raleway", sans-serif;
-$font-open-sans: "Open Sans", sans-serif;
-$font-medium: 400;
-$font-bold: 700;
 
-// Extends
-%tile {
-  h3 {
-    margin-top: 20px;
-    font-family: "Raleway", sans-serif;
-    color: hsl(0, 0%, 100%);
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-  p {
-    margin-top: 20px;
-    font-family: "Open Sans", sans-serif;
-    color: hsl(0, 0%, 70%);
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.7rem;
-  }
-}
-
-%footer-text{
-  color: $color-neutral;
-  font-family: $font-open-sans;
-  font-weight: $font-medium;
-  font-size: 1rem;
-  &_:hover{
-    font-weight: $font-bold;
-  }
-}
-/* Desktop view */
-html {
-  max-width: 1440px;
-  background: $color-bg-main;
-}
-body {
-  height: 100vh;
-  min-width: 1440px;
-  background: $color-bg-footer;
-  margin: auto auto;
-  /* margin: 50px 50px 0 50px; */
-}
 
 header {
-  background: $color-bg-testimonials;
+  background: $color-bg-intro;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,7 +39,7 @@ header {
   background-size: contain;
   width: 100%;
   min-height: 100px;
-  background-color: $color-bg-testimonials;
+  background-color: $color-bg-intro;
   /* margin: 0px auto; */
 
   .hero1 {
@@ -286,13 +235,14 @@ header {
     font-family: $font-open-sans;
     color: $color-neutral;
     max-width: 100%;
-    background-color:$color-bg-main;
-    min-height: 0px;
+    background:$color-bg-main;
+    margin-top: -50px;
     padding: 0px 20px;
     position: relative;
 
     .subscription {
-    background-color: $color-bg-testimonials;
+    background-color: $color-bg-intro;
+    box-shadow: 4px 7px 4px $color-bg-footer;
     max-width: 700px;
     min-height: 200px;
     margin: 0px auto 0px auto;

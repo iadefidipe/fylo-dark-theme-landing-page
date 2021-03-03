@@ -1,0 +1,28 @@
+// Extends
+%tile {
+  h3 {
+    margin-top: 20px;
+    font-family: "Raleway", sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  p {
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    color: hsl(0, 0%, 70%);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+}
+
+%footer-text{
+  color: $color-neutral;
+  font-family: $font-open-sans;
+  font-weight: $font-medium;
+  font-size: 1rem;
+  &_:hover{
+    font-weight: $font-bold;
+  }
+}
