@@ -1,6 +1,7 @@
 @import './partials/variables';
 @import './partials/extends';
 @import './partials/basics';
+@import './partials/media-queries';
 
 
 
@@ -12,6 +13,14 @@ header {
   align-items: center;
   // margin: 0px 15px 0 15px;
   padding: 20px;
+  @include media-query(tablet){
+    header{
+      width: 100%;
+    }
+    .logo,.nav{
+      width: 1fr;
+    }
+  }
   .logo {
     width: 40%;
     padding: 20px 0 0 20px;
@@ -325,13 +334,9 @@ header {
 // // Mobile design
 // @media (min-width:375px){
 
-//     header{
-//         width: 100%;
-//     }
 
-//     .logo,.nav{
-//         width: 1fr;
-//     }
+
+
 // }
 // }
 
