@@ -23,7 +23,7 @@ header {
   }
   .logo {
     width: 40%;
-    padding: 20px 0 0 20px;
+    padding: 1.25rem 0 0 1.25rem;
   }
 
   .nav {
@@ -32,7 +32,7 @@ header {
     min-width: 40%;
     a {
       font-weight: 400;
-      font-size: 1rem;
+      font-size: $font-nav;
       &_:hover {
         font-weight: 700;
         text-decoration: underline;
@@ -47,7 +47,7 @@ header {
   background-position: bottom;
   background-size: contain;
   width: 100%;
-  min-height: 100px;
+  min-height: 6.25rem;
   background-color: $color-bg-intro;
   /* margin: 0px auto; */
 
@@ -68,13 +68,13 @@ header {
   .hero-image img {
     width: 80%;
     height: auto;
-  }
+  } 
   h1 {
     font-family: "Raleway", sans-serif;
     color: $color-neutral;
-    font-size: 2.5rem;
+    font-size: $font-h1;
     font-weight: bold;
-    line-height: 3rem;
+    line-height: $line-height-h1;
   }
 
   .hero-sub-heading {
@@ -83,10 +83,10 @@ header {
     p {
       font-family: "Open Sans", sans-serif;
       color: hsl(0, 0%, 70%);
-      font-size: 1.2rem;
+      font-size: $font-p;
       font-weight: 400px;
       /* margin: 0px 100px; */
-      line-height: 1.7rem;
+      line-height: $line-height;
       text-align: center;
     }
   }
@@ -110,6 +110,7 @@ header {
   }
 }
 .container2 {
+  
   width: 100%;
   display: grid;
   margin: 100px auto;

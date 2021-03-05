@@ -24,13 +24,12 @@
 
 /* Desktop view */
 html {
-  max-width: 1440px;
   background: #181f2a;
 }
 
 body {
   height: 100vh;
-  min-width: 1440px;
+  max-width: 1440px;
   background: #0b1523;
   margin: auto;
   /* margin: 50px 50px 0 50px; */
@@ -61,7 +60,7 @@ header {
 
 header .logo {
   width: 40%;
-  padding: 20px 0 0 20px;
+  padding: 1.25rem 0 0 1.25rem;
 }
 
 header .nav {
@@ -90,7 +89,7 @@ header .nav a_:hover {
   background-position: bottom;
   background-size: contain;
   width: 100%;
-  min-height: 100px;
+  min-height: 6.25rem;
   background-color: #1c2431;
   /* margin: 0px auto; */
 }
