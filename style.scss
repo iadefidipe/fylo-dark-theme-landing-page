@@ -13,27 +13,46 @@ header {
   align-items: center;
   // margin: 0px 15px 0 15px;
   padding: 20px;
+  font-family: $font-open-sans;
   @include media-query(tablet){
-    header{
       width: 100%;
-    }
-    .logo,.nav{
-      width: 1fr;
-    }
+  
+    
   }
   .logo {
     width: 40%;
     padding: 1.25rem 0 0 1.25rem;
+    @include media-query(tablet){
+      width: 1fr;
+    }
+    @include media-query(mobile){
+      width: 30%;
+      padding: 1rem 0 0 1rem;
+      
+    }
+
   }
 
   .nav {
     display: flex;
     justify-content: space-evenly;
-    min-width: 40%;
+    width: 40%;
+    @include media-query(tablet){
+      width: 1fr;
+      
+    }
+    @include media-query(mobile){
+      margin-left: -10px;
+      
+    }
+
     a {
       font-weight: 400;
       font-size: $font-nav;
-      &_:hover {
+      @include media-query(tablet){
+        
+      }
+      &:hover {
         font-weight: 700;
         text-decoration: underline;
       }
@@ -42,6 +61,7 @@ header {
 }
 
 .container {
+  padding: 20px;
   background-image: url(images/bg-curvy-desktop.svg);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -50,6 +70,9 @@ header {
   min-height: 6.25rem;
   background-color: $color-bg-intro;
   /* margin: 0px auto; */
+  @include media-query(tablet){
+    width: 100%;
+  }
 
   .hero1 {
     max-width: 50%;
@@ -61,13 +84,19 @@ header {
     align-items: center;
     /* justify-content: space-between; */
     text-align: center;
-  }
+    @include media-query (tablet){
+      max-width: 90%;
+    }
+  }     
   .hero-image {
     margin-top: 50px;
   }
   .hero-image img {
     width: 80%;
     height: auto;
+    @include media-query (tablet){
+      width: 90%;
+    }
   } 
   h1 {
     font-family: "Raleway", sans-serif;
@@ -80,6 +109,9 @@ header {
   .hero-sub-heading {
     width: 70%;
     margin-top: 20px;
+    @include media-query (tablet){
+      width: 90%;
+    }
     p {
       font-family: "Open Sans", sans-serif;
       color: hsl(0, 0%, 70%);
@@ -101,7 +133,7 @@ header {
       border-radius: 50px;
       font-family: "Raleway", sans-serif;
       font-weight: 700;
-      &_:hover{
+      &:hover{
         background: $color-accent-cyan;
       }
     
@@ -111,7 +143,6 @@ header {
 }
 .container2 {
   
-  width: 100%;
   display: grid;
   margin: 100px auto;
   grid-template-areas:
@@ -121,6 +152,14 @@ header {
   text-align: center;
   grid-gap: 50px;
   max-width: 50%;
+  @include media-query (tablet){
+    max-width: 60%;
+    grid-template-areas:
+    "tile1"
+    "tile2"
+    "tile3"
+    "tile4";
+  }
   /* .tile img{
     color: hsl(198, 60%, 50%);
 } */
@@ -148,10 +187,25 @@ header {
   justify-content: center;
   /* align-content: center; */
   align-items: center;
+  
   margin: 100px auto;
   width: 75%;
+  @include media-query (tablet){
+    width: 80%;
+    flex-wrap: wrap;
+    margin: auto;
+    align-content: center;
+
+  }
+
+
   .copyimg {
     margin-right: 50px;
+    @include media-query (tablet){
+      display: block;
+      margin: auto auto;
+      align-self: center;
+    }
   }
 
   .copy h2 {
@@ -160,6 +214,10 @@ header {
     font-size: 2.5rem;
     line-height: 3rem;
     color: $color-neutral;
+    @include media-query (tablet){
+      margin-top: 30px;
+    }
+    
 }
   .copy1 {
     margin-top: 20px;
@@ -190,6 +248,12 @@ header {
   background-repeat: no-repeat;
   background-position: top left;
   background-position-x: 10px;
+  @include media-query (tablet){
+    grid-gap: 40px;
+    grid-template-columns: minmax(150px, auto);
+    grid-template-rows: repeat(3,minmax(150px, 1fr));
+  }
+    
 
   .test {
     background: $color-bg-testimonials;
@@ -244,7 +308,7 @@ header {
 .subscription-container {
     font-family: $font-open-sans;
     color: $color-neutral;
-    max-width: 100%;
+    // max-width: 100%;
     background:$color-bg-main;
     margin-top: -50px;
     padding: 0px 20px;
@@ -253,7 +317,7 @@ header {
     .subscription {
     background-color: $color-bg-intro;
     box-shadow: 4px 7px 4px $color-bg-footer;
-    max-width: 700px;
+    max-width: 43.75rem;
     min-height: 200px;
     margin: 0px auto 0px auto;
     text-align: center;
@@ -342,7 +406,7 @@ header {
 // }
 
 .footer {
-  min-height:40%;
+  min-height:60%;
   margin: 0 auto;
   padding: 20px;
   background: $color-bg-footer;
@@ -357,6 +421,10 @@ header {
   .flex-info{
       display: flex;
       justify-content: center;
+      @include media-query(tablet){
+        margin-top: 70px;
+        flex-direction: column;
+      }
       .footer-location{
           flex: 1;
           display: flex;
@@ -377,6 +445,11 @@ header {
           margin-left: 20px ;
           display: flex;
           flex-direction: column;
+          @include media-query(tablet){
+            margin-top: 20px;
+            margin-left: 0px;
+            
+          }
           .phone{
             display: flex;
             @extend %footer-text;
@@ -403,6 +476,11 @@ header {
           grid-template-columns: repeat(2, minmax(20px, 100px));
           grid-template-rows: repeat(4, minmax(20px, 30px)) ;
           grid-gap: 10px;
+          @include media-query(tablet){
+            margin-top: 20px;
+            grid-template-columns: minmax(20px, 100px);
+            grid-template-rows: repeat(7, minmax(20px, 30px)) 
+          }
           a{
             @extend %footer-text;
           }
