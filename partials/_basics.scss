@@ -1,9 +1,14 @@
 /* Desktop view */
 html {
-  width: 100vw;
+  
   background: $color-bg-main;
   box-sizing: border-box;
 }
+
+*, *::after, *::before{
+  box-sizing: inherit;
+}
+
 body {
   // height: 100vh;
   // max-width: 100%;
@@ -12,3 +17,9 @@ body {
   /* margin: 50px 50px 0 50px; */
   
 }
+
+// img{
+//   display:block;
+//   // width: 100%;
+//   height: auto;
+// }

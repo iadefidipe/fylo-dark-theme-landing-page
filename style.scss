@@ -1,7 +1,8 @@
 @import './partials/variables';
 @import './partials/extends';
-@import './partials/basics';
 @import './partials/media-queries';
+@import './partials/basics';
+
 
 
 
@@ -195,6 +196,11 @@ header {
     flex-wrap: wrap;
     margin: auto;
     align-content: center;
+
+    .copyimg > img{
+      width: 277px;
+      height: 205px;
+    }
 
   }
 
