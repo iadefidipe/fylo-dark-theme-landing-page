@@ -8,18 +8,18 @@
 
 
 header {
+  
   background: $color-bg-intro;
   display: flex;
   justify-content: space-between;
   align-items: center;
   // margin: 0px 15px 0 15px;
-  padding: 20px;
+  padding: 20px 80px;
   font-family: $font-open-sans;
   @include media-query(tablet){
-      width: 100%;
-  
-    
+    padding: 20px;
   }
+
   .logo {
     width: 40%;
     padding: 1.25rem 0 0 1.25rem;
@@ -27,8 +27,10 @@ header {
       width: 1fr;
     }
     @include media-query(mobile){
-      width: 30%;
-      padding: 1rem 0 0 1rem;
+      align-content: center;
+      width: 74px;
+      height: 22px;
+      padding: 0rem 0 0 0rem;
       
     }
 
@@ -37,12 +39,11 @@ header {
   .nav {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 40%;
+    
     @include media-query(tablet){
-      width: 1fr;
-      
-    }
-    @include media-query(mobile){
+      justify-content: space-around;
       margin-left: -10px;
       
     }
@@ -50,9 +51,16 @@ header {
     a {
       font-weight: 400;
       font-size: $font-nav;
+      
       @include media-query(tablet){
+        font-size: 0.8rem;
+        &:not(:last-child){
+        margin-right: 5px;
+      }
         
       }
+      
+
       &:hover {
         font-weight: 700;
         text-decoration: underline;
@@ -161,9 +169,10 @@ header {
     "tile3"
     "tile4";
   }
-  /* .tile img{
-    color: hsl(198, 60%, 50%);
-} */
+
+  img{
+    margin: auto;
+  }
 
   .tile1 {
     @extend %tile;
@@ -414,12 +423,15 @@ header {
 .footer {
   min-height:60%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 80px;
   background: $color-bg-footer;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  @include media-query(tablet){
+    padding: 20px;
+  }
 
   .footer-logo{
     margin-top: 70px;

@@ -40,6 +40,11 @@ body {
   /* margin: 50px 50px 0 50px; */
 }
 
+img {
+  display: block;
+  height: auto;
+}
+
 header {
   background: #1c2431;
   display: -webkit-box;
@@ -51,13 +56,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 20px 80px;
   font-family: "Open Sans", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
   header {
-    width: 100%;
+    padding: 20px;
   }
 }
 
@@ -74,8 +79,11 @@ header .logo {
 
 @media screen and (max-width: 556px) {
   header .logo {
-    width: 30%;
-    padding: 1rem 0 0 1rem;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 74px;
+    height: 22px;
+    padding: 0rem 0 0 0rem;
   }
 }
 
@@ -86,17 +94,16 @@ header .nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40%;
 }
 
 @media screen and (max-width: 768px) {
   header .nav {
-    width: 1fr;
-  }
-}
-
-@media screen and (max-width: 556px) {
-  header .nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-left: -10px;
   }
 }
@@ -104,6 +111,15 @@ header .nav {
 header .nav a {
   font-weight: 400;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  header .nav a {
+    font-size: 0.8rem;
+  }
+  header .nav a:not(:last-child) {
+    margin-right: 5px;
+  }
 }
 
 header .nav a:hover {
@@ -224,9 +240,6 @@ header .nav a:hover {
   text-align: center;
   grid-gap: 50px;
   max-width: 50%;
-  /* .tile img{
-    color: hsl(198, 60%, 50%);
-} */
 }
 
 @media screen and (max-width: 768px) {
@@ -234,6 +247,10 @@ header .nav a:hover {
     max-width: 60%;
         grid-template-areas: "tile1" "tile2" "tile3" "tile4";
   }
+}
+
+.container2 img {
+  margin: auto;
 }
 
 .container2 .tile1 {
@@ -525,7 +542,7 @@ header .nav a:hover {
 .footer {
   min-height: 60%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 80px;
   background: #0b1523;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,6 +556,12 @@ header .nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
 }
 
 .footer .footer-logo {
