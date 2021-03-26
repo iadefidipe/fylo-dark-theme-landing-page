@@ -62,7 +62,6 @@ html {
 }
 
 body {
-  margin: auto;
   /* margin: 50px 50px 0 50px; */
 }
 
@@ -325,9 +324,6 @@ header nav a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   /* align-content: center; */
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -338,12 +334,11 @@ header nav a:hover {
 
 @media screen and (max-width: 768px) {
   .container3 {
+    padding: 0 20px;
     width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: auto;
-    -ms-flex-line-pack: center;
-        align-content: center;
   }
 }
 
@@ -353,30 +348,30 @@ header nav a:hover {
 
 @media screen and (max-width: 768px) {
   .container3 .copyimg {
-    display: block;
     margin: auto;
+    width: 100%;
   }
 }
 
 .container3 .copy h2 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   color: white;
 }
 
 @media screen and (max-width: 768px) {
   .container3 .copy h2 {
     margin-top: 30px;
-    font-size: 2.25rem;
-    line-height: 2.3rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
   }
 }
 
 @media screen and (max-width: 556px) {
   .container3 .copy h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 2rem;
   }
 }
@@ -386,8 +381,22 @@ header nav a:hover {
   font-family: "Open Sans", sans-serif;
   color: #b3b3b3;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container3 .copy1 {
+    margin-top: 10px;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .container3 .copy1 {
+    font-size: 0.75rem;
+  }
 }
 
 .container3 hr {
@@ -400,6 +409,18 @@ header nav a:hover {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .container3 hr {
+    width: 145px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .container3 hr {
+    width: 125px;
+  }
+}
+
 .container3 .copy-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,15 +431,17 @@ header nav a:hover {
   color: #65e2d9;
 }
 
-.container3 .copy-link a:hover {
-  color: white;
-}
-
 .container3 .copy-link img {
-  width: 4%;
+  max-width: 4%;
 }
 
-.container3 .copy-link img:hover {
+@media screen and (max-width: 556px) {
+  .container3 .copy-link img {
+    max-width: 5%;
+  }
+}
+
+.container3 .link-container:hover {
   color: white;
 }
 
@@ -456,9 +479,6 @@ header nav a:hover {
   border-radius: 5px;
   padding: 30px;
   color: white;
-  /* .testdetails {
-            display: grid;
-            grid-template-rows: auto auto;} */
 }
 
 .testimonial .test .testbody {
@@ -470,24 +490,39 @@ header nav a:hover {
   line-height: 1.7rem;
 }
 
+@media screen and (max-width: 768px) {
+  .testimonial .test .testbody {
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .testimonial .test .testbody {
+    font-size: 0.75rem;
+  }
+}
+
 .testimonial .test .testprofile {
-  /* max-height: 20%; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* justify-content: center; */
   margin-top: 20px;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.testimonial .test .testprofile img {
-  height: 50px;
+.testimonial .test .testprofile .testimg {
+  width: 10%;
+}
+
+.testimonial .test .testprofile .testimg img {
   border-radius: 100px;
-  margin-right: 10px;
+}
+
+.testimonial .test .testdetails {
+  margin-left: 20px;
 }
 
 .testimonial .test .testdetails h4 {
@@ -497,12 +532,37 @@ header nav a:hover {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .testimonial .test .testdetails h4 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .testimonial .test .testdetails h4 {
+    font-size: 0.75rem;
+  }
+}
+
 .testimonial .test .testdetails p {
   margin-top: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   color: #b3b3b3;
-  font-weight: 400;
   font-size: 0.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial .test .testdetails p {
+    margin-top: 5px;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .testimonial .test .testdetails p {
+    font-size: 0.5rem;
+  }
 }
 
 .subscription-container {
@@ -623,6 +683,7 @@ header nav a:hover {
   margin-left: 15px;
 }
 
+/* footer style*/
 .footer {
   min-height: 60%;
   margin: 0 auto;

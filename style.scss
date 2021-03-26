@@ -218,7 +218,7 @@ header {
 
 .container3 {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   /* align-content: center; */
   align-items: center;
   
@@ -226,18 +226,20 @@ header {
   padding: 0 5rem;
   
   @include media-query (tablet){
+    padding: 0 20px;
     width: 100%;
     flex-wrap: wrap;
     margin: auto;
-    align-content: center;
+    
   }
 
 
   .copyimg {
+    
     margin-right: 50px;
     @include media-query (tablet){
-      display: block;
       margin: auto;
+      width: 100%;
       
     }
   }
@@ -245,26 +247,38 @@ header {
   .copy h2 {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
     color: $color-neutral;
     @include media-query (tablet){
       margin-top: 30px;
-      font-size: 2.25rem,;
-      line-height: 2.3rem;
+      font-size: 1.5rem,;
+      line-height: 1.7rem;
     }
     @include media-query(mobile){
-      font-size: 2rem,;
+      font-size: 1rem,;
       line-height: 2rem;
     }
-}
+  }
+
+
   .copy1 {
     margin-top: 20px;
     font-family: "Open Sans", sans-serif;
     color: hsl(0, 0%, 70%);
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.7rem;
+    @include media-query (tablet){
+      margin-top: 10px;
+      font-size: 0.875rem,;
+      line-height: 1.3rem;
+    }
+    @include media-query(mobile){
+      font-size: 0.75rem;
+      
+    }
+
   }
 
   hr{
@@ -274,26 +288,43 @@ header {
     &:hover{
       color: $color-neutral;
     }
+
+    @include media-query (tablet){
+      width: 145px;
+    }
+    @include media-query(mobile){
+      width: 125px ;
+      
+    }
   }
+
+  
 
   .copy-link {
     display: flex;
   
     a {
       color: hsl(176, 68%, 64%);
-      &:hover{
-      color: $color-neutral;
+      
     }
-    }
+  
 
     img{
-      width: 4%;
-      &:hover{
-      color: $color-neutral;
-    }
+      max-width: 4%;
+      @include media-query(mobile){
+        max-width: 5%;
+      }
     }
   }
+
+  .link-container{
+    &:hover{
+      color: $color-neutral;
+    }
+  }
+
 }
+
 
 .testimonial {
   width: 80%;
@@ -308,6 +339,7 @@ header {
   background-position: top left;
   background-position-x: 10px;
   @include media-query (tablet){
+    
     grid-gap: 40px;
     grid-template-columns: minmax(150px, auto);
     grid-template-rows: repeat(3,minmax(150px, 1fr));
@@ -328,39 +360,71 @@ header {
       font-weight: 400;
       font-size: 1.1rem;
       line-height: 1.7rem;
-    }
-
-    .testprofile {
-      /* max-height: 20%; */
-      display: flex;
-      /* justify-content: center; */
-      margin-top: 20px;
-      align-content: center;
-      align-items: center;
-
-      img {
-        height: 50px;
-        border-radius: 100px;
-        margin-right: 10px;
+      @include media-query (tablet){
+        font-size: 0.875rem;
+        line-height: 1.3rem;
+      }
+      @include media-query(mobile){
+        font-size: 0.75rem;
       }
     }
 
-    /* .testdetails {
-            display: grid;
-            grid-template-rows: auto auto;} */
-    .testdetails h4 {
-      font-family: "Raleway", sans-serif;
-      font-weight: bold;
-      font-size: 1rem;
-      color: white;
+    .testprofile {
+      display: flex;
+      margin-top: 20px;  
+      align-items: center;
+
+
+      .testimg{
+        width: 10%;
+        img {
+          border-radius: 100px;
+        
+        }
+
+
+      }
+
+      
     }
-    .testdetails p {
-      margin-top: 10px;
-      font-family: $font-open-sans;
-      color: hsl(0, 0%, 70%);
-      font-weight: 400;
-      font-size: 0.875rem;
+
+    .testdetails{
+      margin-left: 20px;
+
+      h4 {
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        color: white;
+        @include media-query (tablet){
+          font-size: 0.875rem;
+          
+        }
+        @include media-query(mobile){
+          font-size: 0.75rem;
+        }
+      }
+      p {
+        margin-top: 10px;
+        font-family: $font-raleway;
+        font-weight: $font-bold;
+        color: hsl(0, 0%, 70%);
+        font-size: 0.875rem;
+        @include media-query (tablet){
+          margin-top: 5px;
+          font-size: 0.75rem;
+          
+        }
+        @include media-query(mobile){
+          font-size: 0.5rem;
+        }
+      }
+
+
     }
+
+    
+    
   }
 }
 
@@ -454,25 +518,8 @@ header {
   }
 }
 
-//     @include media-query(mobile) {
-//         p {
-//             margin: 20px 0px;
-//         }
-//     }
-// }
 
-// @include media-query(mobile) {
-//     margin-left: 0px;
-// }
-
-// // Mobile design
-// @media (min-width:375px){
-
-
-
-
-// }
-// }
+/* footer style*/
 
 .footer {
   min-height:60%;
