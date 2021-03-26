@@ -6,7 +6,14 @@
     color: hsl(0, 0%, 100%);
     font-size: 1.2rem;
     font-weight: 700;
+    @media(max-width:768px){
+      font-size: 1rem;
+    }
+    @media(max-width:556px){
+      font-size: 0.875rem;
+    }
   }
+
   p {
     margin-top: 20px;
     font-family: "Open Sans", sans-serif;
@@ -14,8 +21,15 @@
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.7rem;
+    @media(max-width:768px){
+      font-size: 0.875rem;
+    }
+    @media(max-width:556px){
+      font-size: 0.75rem;
+    }
   }
 }
+
 
 %footer-text{
   color: $color-neutral;

@@ -6,6 +6,18 @@
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .container2 .tile1 h3, .container2 .tile2 h3, .container2 .tile3 h3, .container2 .tile4 h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 556px) {
+  .container2 .tile1 h3, .container2 .tile2 h3, .container2 .tile3 h3, .container2 .tile4 h3 {
+    font-size: 0.875rem;
+  }
+}
+
 .container2 .tile1 p, .container2 .tile2 p, .container2 .tile3 p, .container2 .tile4 p {
   margin-top: 20px;
   font-family: "Open Sans", sans-serif;
@@ -13,6 +25,18 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7rem;
+}
+
+@media (max-width: 768px) {
+  .container2 .tile1 p, .container2 .tile2 p, .container2 .tile3 p, .container2 .tile4 p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 556px) {
+  .container2 .tile1 p, .container2 .tile2 p, .container2 .tile3 p, .container2 .tile4 p {
+    font-size: 0.75rem;
+  }
 }
 
 .footer .flex-info .footer-location, .footer .flex-info .footer-contact .phone, .footer .flex-info .footer-contact .email, .footer .footer-link a {
@@ -243,25 +267,34 @@ header nav a:hover {
   background: #ff4242;
 }
 
+/* feature tiles style with CSS grid*/
 .container2 {
   display: -ms-grid;
   display: grid;
   margin: 100px auto;
       grid-template-areas: "tile1 tile2" "tile3 tile4";
   text-align: center;
-  grid-gap: 50px;
-  max-width: 50%;
+  grid-row-gap: 50px;
+  grid-column-gap: 200px;
+  max-width: 65%;
 }
 
 @media screen and (max-width: 768px) {
   .container2 {
-    max-width: 60%;
+    max-width: 100%;
         grid-template-areas: "tile1" "tile2" "tile3" "tile4";
   }
 }
 
 .container2 img {
   margin: auto;
+  width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+  .container2 img {
+    max-width: 20%;
+  }
 }
 
 .container2 .tile1 {
@@ -300,21 +333,17 @@ header nav a:hover {
       -ms-flex-align: center;
           align-items: center;
   margin: 100px auto;
-  width: 75%;
+  padding: 0 5rem;
 }
 
 @media screen and (max-width: 768px) {
   .container3 {
-    width: 80%;
+    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: auto;
     -ms-flex-line-pack: center;
         align-content: center;
-  }
-  .container3 .copyimg > img {
-    width: 277px;
-    height: 205px;
   }
 }
 
@@ -325,10 +354,7 @@ header nav a:hover {
 @media screen and (max-width: 768px) {
   .container3 .copyimg {
     display: block;
-    margin: auto auto;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    margin: auto;
   }
 }
 
@@ -343,6 +369,15 @@ header nav a:hover {
 @media screen and (max-width: 768px) {
   .container3 .copy h2 {
     margin-top: 30px;
+    font-size: 2.25rem;
+    line-height: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .container3 .copy h2 {
+    font-size: 2rem;
+    line-height: 2rem;
   }
 }
 
@@ -355,12 +390,36 @@ header nav a:hover {
   line-height: 1.7rem;
 }
 
-.container3 .copylink {
-  text-decoration: underline;
+.container3 hr {
+  margin-top: 2px;
+  width: 180px;
+  color: #65e2d9;
 }
 
-.container3 .copylink a {
+.container3 hr:hover {
+  color: white;
+}
+
+.container3 .copy-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container3 .copy-link a {
   color: #65e2d9;
+}
+
+.container3 .copy-link a:hover {
+  color: white;
+}
+
+.container3 .copy-link img {
+  width: 4%;
+}
+
+.container3 .copy-link img:hover {
+  color: white;
 }
 
 .testimonial {
@@ -581,6 +640,7 @@ header nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -591,6 +651,7 @@ header nav a:hover {
 
 .footer .footer-logo {
   margin-top: 70px;
+  max-width: 30%;
 }
 
 .footer .flex-info {
@@ -610,6 +671,10 @@ header nav a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.footer .flex-info img {
+  width: 27px;
 }
 
 .footer .flex-info .footer-location {
