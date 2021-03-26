@@ -5,7 +5,7 @@
 
 
 
-
+/* header stlye */
 
 header {
   
@@ -20,33 +20,33 @@ header {
     padding: 20px;
   }
 
+  /* fylo logo */
+
   .logo {
-    width: 40%;
+
+    max-width: 30%;
     padding: 1.25rem 0 0 1.25rem;
     @include media-query(tablet){
-      width: 30%;
       align-content: center;
     }
+    
+
+
+
 
   }
 
-  .nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 40%;
+  nav {
 
-    
-    
 
     a {
       font-weight: 400;
       font-size: $font-nav;
 
       &:not(:first-child){
-        margin-left: 50px;
+        margin-left: 30px;
         @include media-query(tablet){
-          margin-left: 10px;
+          margin-left: 20px;
         }
       }
 
@@ -57,9 +57,10 @@ header {
     
       
       @include media-query(tablet){
-        font-size: 0.8rem;
-        
-        
+        font-size: 0.875rem;
+      }
+      @include media-query(mobile){
+        font-size: 0.75rem;
       }
       
 
