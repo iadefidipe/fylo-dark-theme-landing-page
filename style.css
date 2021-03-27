@@ -62,7 +62,7 @@ html {
 }
 
 body {
-  /* margin: 50px 50px 0 50px; */
+  margin: auto;
 }
 
 img {
@@ -514,7 +514,13 @@ header nav a:hover {
 }
 
 .testimonial .test .testprofile .testimg {
-  width: 10%;
+  width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial .test .testprofile .testimg {
+    width: 10%;
+  }
 }
 
 .testimonial .test .testprofile .testimg img {
@@ -545,7 +551,7 @@ header nav a:hover {
 }
 
 .testimonial .test .testdetails p {
-  margin-top: 10px;
+  margin-top: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: #b3b3b3;
@@ -580,11 +586,10 @@ header nav a:hover {
           box-shadow: 4px 7px 4px #0b1523;
   max-width: 43.75rem;
   min-height: 200px;
-  margin: 0px auto 0px auto;
+  margin: 0px auto;
   text-align: center;
   padding: 30px;
   border-radius: 5px;
-  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -604,6 +609,30 @@ header nav a:hover {
 .subscription-container .subscription h2 {
   font-size: 1.7rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .subscription-container .subscription h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .subscription-container .subscription h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .subscription-container .subscription p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .subscription-container .subscription p {
+    font-size: 0.75remrem;
+  }
 }
 
 .subscription-container .subscription .form-container {

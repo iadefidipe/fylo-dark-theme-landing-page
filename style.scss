@@ -376,7 +376,11 @@ header {
 
 
       .testimg{
-        width: 10%;
+        width: 20%;
+        @include media-query (tablet){
+          width: 10%;
+        }
+
         img {
           border-radius: 100px;
         
@@ -405,7 +409,7 @@ header {
         }
       }
       p {
-        margin-top: 10px;
+        margin-top:0;
         font-family: $font-raleway;
         font-weight: $font-bold;
         color: hsl(0, 0%, 70%);
@@ -442,11 +446,11 @@ header {
     box-shadow: 4px 7px 4px $color-bg-footer;
     max-width: 43.75rem;
     min-height: 200px;
-    margin: 0px auto 0px auto;
+    margin: 0px auto;
     text-align: center;
     padding: 30px;
     border-radius: 5px;
-    display: block;
+    
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -457,13 +461,35 @@ header {
     h2{
       font-size: 1.7rem;
       font-weight: $font-bold;
+      @include media-query (tablet){
+          
+          font-size: 1.5rem;
+          
+        }
+        @include media-query(mobile){
+          font-size: 1.2rem;
+        }
     }
+
+    p{
+      @include media-query (tablet){
+          
+          font-size: 0.875rem;
+          
+        }
+        @include media-query(mobile){
+          font-size: 0.75remrem;
+        }
+    }
+
+
 
     .form-container {
         width: 100%;
         min-height: 10px;
         display: flex;
         justify-content: center;
+
         form {
             flex: 1;
             display: inline-block;
@@ -472,6 +498,7 @@ header {
             max-width: 600px;
             justify-content: center;
             line-height: 40px;
+            
 
             input:first-of-type {
                 background-color: hsl(0, 0%, 100%);
